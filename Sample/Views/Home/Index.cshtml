@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "IpBanHummer Demo Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Образец работы IpBanHummer</h1>
+    <ul>
+        <li>
+            <a asp-area="" asp-controller="Home" asp-action="ParserProtected">Образец автоматической защиты от частого сканирования (парсинга)</a>
+        </li>
+        <li>
+            <a asp-area="" asp-controller="Home" asp-action="BruteForceProtected">Образец работы защиты от брутфорса</a>
+        </li>
+    </ul>
+
+    Другие Endpoint-actions: <a asp-area="" asp-controller="Home" asp-action="ParserProtected2">Защищенный от парсинга</a>
+    <a asp-area="" asp-controller="Home" asp-action="ParserUnProtected">НЕ защищенный от парсинга</a>
+</div>

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Sample of IpBanHammer</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a asp-area="" asp-controller="Home" asp-action="Index">IpBanHammer Sample Home</a>
+            <div>
+                <ul>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="ParserProtected">Parser Protected</a>
+                    </li>
+                    <li>
+                        <a asp-area="" asp-controller="Home" asp-action="BruteForceProtected">Brute Force Protected</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <main role="main">
+            @RenderBody()
+        </main>
+    </div>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

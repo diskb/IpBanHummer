@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Parser Protected";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    Эта страница под защитой атрибута антипарсера. Её обновление с частотой не реже @AntiparserOptions.CurrentValue.RegisterBadActionIfPreviousRequestIsLess
+    приведёт к блокировке IP-адреса на время @AntiparserOptions.CurrentValue.BanTime.
+</p>
+<p>
+    Используеся Services.AddAntiparser() и атрибут [ParserProtectorAttribute] на Action контроллера.
+</p>

@@ -1,0 +1,9 @@
+﻿@using Sample
+@using Sample.Models
+@using IpBanHammer 
+@using Microsoft.Extensions.Options
+ 
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@inject IOptionsMonitor<AntiparserOptions> AntiparserOptions
+@inject IOptionsMonitor<BanAccounterOptions<string>> BruteForceOptions

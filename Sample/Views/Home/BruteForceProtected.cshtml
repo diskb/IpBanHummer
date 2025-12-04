@@ -1,0 +1,24 @@
+﻿@model SimpleFormModel
+@{
+    ViewData["Title"] = "Brute Force Protected Demo Form";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Эта страница защищена от брутфорса. Последовательность отправленных запросов с некорректными данными приведёт к
+    блокировке IP-адреса в связке с юзер-агентом на время @BruteForceOptions.CurrentValue.BanTime.</p>
+
+<form method="post">
+    <div asp-validation-summary="ModelOnly" class="error"></div>
+    <label asp-for="Value"></label>:
+    <input asp-for="Value" />
+    <br />
+    <span asp-validation-for="Value" class="error"></span>
+    <br />
+    <input type="submit" value="Отправить" />
+</form>
+
+<p>
+    Используеся services.AddBanAccounter&lt;string&gt;(), внедрение зависимости BanAccounter&lt;string&gt;
+    в конструктор контроллера и вызовы методов BanAccounter&lt;string&gt; внутри Action контроллера:
+    IsBanned() и RegisterBadAction().
+</p>
